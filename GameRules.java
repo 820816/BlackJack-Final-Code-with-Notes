@@ -7,6 +7,9 @@ public class GameRules{
   private int aceCo=1;
   private int aceUs=1;
 
+  //Int to adjust dealer turn
+  private int DealerTurn;
+
   //Deck of cards used
   private Deck cards;
 
@@ -67,7 +70,6 @@ public class GameRules{
       cards=new Deck();
       CardCount=0;
     }
-    int DealerTurn=0;
     Last=cards.toString(CardCount);
     Card[PCards]=(cards.toString(CardCount));
     PCards+=1;
@@ -177,6 +179,8 @@ public class GameRules{
   
   //Code to keep cards and determine win or loss
   public void Hold(){
+
+    int DealerTurn=0;
     //Resets ace value to 11
     aceCo=1;
     aceUs=1;
