@@ -129,8 +129,10 @@ public class GameRules{
    }
 
    //Dealer cards runs through automatically, hits to at least 16 like normal blackjack rules
-   while(CScore<=16){  
+   while(CScore<=16){
+     System.out.print("Dealer Card: ");
      Last2=cards.toString(CardCount);
+     System.out.println(Last2);
      CardCount++;
      if(Last2.substring(0,1).equals("2")){
       CScore+=2;
